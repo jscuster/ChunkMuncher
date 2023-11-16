@@ -14,7 +14,7 @@ setup(
     version = "0.0.1",
     author = "Jason Custer",
     author_email = "jscuster@gmail.com",
-    description = "Recharge of the chunk module that was removed as of python 13.0.",
+    description = "Recharge of the chunk module that was removed as of Python 3.13.",
     license = "PSF-2.0",
     keywords = "python chunk IFF PEP594",
     url = "https://github.com/jscuster/ChunkMuncher",
