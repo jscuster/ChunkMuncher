@@ -7,18 +7,16 @@ def read(fname):
 
 setup(
     name = "chunkmuncher",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Jason Custer",
     author_email = "jscuster@gmail.com",
     description = "Recharge of the chunk module that was removed as of Python 3.13.",
     license = "PSF-2.0",
     keywords = "python chunk IFF PEP594",
     url = "https://github.com/jscuster/ChunkMuncher",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
     long_description=read('README.md'),
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
         "Topic :: File Formats",
         "License :: OSI Approved :: Python Software Foundation License",
@@ -26,5 +24,10 @@ setup(
         "Natural Language :: English",
         "Programming Language :: Python",
     ],
-    include_package_data=True,  # Include all package data, including docs and tests
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    #include_package_data=True,
+    data_files=[('docs', ['docs/*.rst'])],
+    # Exclude the tests from being installed to site-packages
+    exclude_package_data={'': ['tests']},
 )
