@@ -26,8 +26,8 @@ setup(
     ],
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    #include_package_data=True,
-    data_files=[('docs', ['docs/*.rst'])],
+    include_package_data=True,
+    #data_files=[('docs', ['docs'])],
     # Exclude the tests from being installed to site-packages
     exclude_package_data={'': ['tests']},
 )

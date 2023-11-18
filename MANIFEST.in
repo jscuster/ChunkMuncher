@@ -1,3 +1,3 @@
 include LICENSE
-recursive-include docs *
+graft docs
 recursive-exclude tests *
