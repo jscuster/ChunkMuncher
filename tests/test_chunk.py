@@ -9,7 +9,6 @@ pkgPath = str(pkgPath) #all that for a string?!
 #append the path to the module under test.
 if not pkgPath in sys.path: sys.path.append(pkgPath) # path to module being tested.
 from chunkmuncher import chunk
-from mid import MidiWriter
 
 class test_chunk_midi(unittest.TestCase):
 	"""Test the chunk module."""
@@ -55,7 +54,7 @@ class test_chunk_midi(unittest.TestCase):
 		track.skip()
 		file.close()
 		self.delMid() #delete the temporary file.
-		midiData = MidiWriter.midiData
+		midiData = self.midiData
 		#make sure the track that was written is what was read.
 		self.assertTrue(track_data in midiData)
 		self.assertEqual(midiData.index(track_data), 22)
