@@ -30,4 +30,7 @@ setup(
     #data_files=[('docs', ['docs'])],
     # Exclude the tests from being installed to site-packages
     exclude_package_data={'': ['tests']},
+    extras_require={
+        "tests": ["pytest", "pytest-cov"],
+    },
 )
